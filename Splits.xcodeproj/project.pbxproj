@@ -14,6 +14,7 @@
 		FE004A3B233F43A700286A50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE004A39233F43A700286A50 /* Main.storyboard */; };
 		FE004A3D233F43A800286A50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE004A3C233F43A800286A50 /* Assets.xcassets */; };
 		FE004A40233F43A800286A50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE004A3E233F43A800286A50 /* LaunchScreen.storyboard */; };
+		FE004A48233F51E800286A50 /* images+Names+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE004A47233F51E800286A50 /* images+Names+Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		FE004A3C233F43A800286A50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE004A3F233F43A800286A50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE004A41233F43A800286A50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE004A47233F51E800286A50 /* images+Names+Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "images+Names+Colors.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				FE004A3C233F43A800286A50 /* Assets.xcassets */,
 				FE004A3E233F43A800286A50 /* LaunchScreen.storyboard */,
 				FE004A41233F43A800286A50 /* Info.plist */,
+				FE004A47233F51E800286A50 /* images+Names+Colors.swift */,
 			);
 			path = Splits;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE004A32233F43A700286A50 /* AppDelegate.swift in Sources */,
+				FE004A48233F51E800286A50 /* images+Names+Colors.swift in Sources */,
 				FE004A34233F43A700286A50 /* SceneDelegate.swift in Sources */,
 				FE004A36233F43A700286A50 /* MasterViewController.swift in Sources */,
 				FE004A38233F43A700286A50 /* DetailViewController.swift in Sources */,
@@ -291,6 +295,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S34YM3S85L;
 				INFOPLIST_FILE = Splits/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -309,6 +314,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S34YM3S85L;
 				INFOPLIST_FILE = Splits/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
