@@ -19,21 +19,21 @@ class MasterViewController: UITableViewController {
 
 
     // MARK: - Segues
-/*
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
             if let indexPath = tableView.indexPathForSelectedRow {
-                let object = objects[indexPath.row] as! NSDate
-                let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
-                controller.detailItem = object
+    
+                let controller = (segue.destination as! UINavigationController).topViewController as! ImagePresentationVC
+                controller.image = imageArray[indexPath.row]
                 controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
                 controller.navigationItem.leftItemsSupplementBackButton = true
-                detailViewController = controller
+                //detailViewController = controller
             }
         }
     }
- */
 
+    
     // MARK: - Table View
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -52,7 +52,13 @@ class MasterViewController: UITableViewController {
         return cell
     }
 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 
-
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return tableView.frame.height/CGFloat(imageArray.count)
+    }
 }
 

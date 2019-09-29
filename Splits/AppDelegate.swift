@@ -18,6 +18,24 @@ class SplitDelegate : UISplitViewControllerDelegate {
         }
         return false
     }
+
+    func targetDisplayModeForAction(in svc: UISplitViewController) -> UISplitViewController.DisplayMode {
+        let navigationController = svc.viewControllers.last as? UINavigationController
+        let vc:UIViewController = (navigationController?.topViewController)!
+        if svc.displayMode == UISplitViewController.DisplayMode.primaryHidden || svc.displayMode == UISplitViewController.DisplayMode.primaryOverlay {
+                vc.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named:"theicon120"),
+                    landscapeImagePhone: UIImage(named:"theicon120"),
+                    style: UIBarButtonItem.Style.plain,
+                    target: vc.splitViewController!.displayModeButtonItem.target,
+                    action: vc.splitViewController!.displayModeButtonItem.action)
+            }else {
+    // disable button on landscape
+            if UIApplication.shared.statusBarOrientation == UIInterfaceOrientation.landscapeLeft || UIApplication.shared.statusBarOrientation == UIInterfaceOrientation.landscapeRight {
+                vc.navigationItem.leftBarButtonItem?.isEnabled = false
+                }
+            }
+        return UISplitViewController.DisplayMode.automatic
+    }
 }
 
 
@@ -33,6 +51,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         guard let splitViewController = window.rootViewController as? UISplitViewController else { return false}
         guard let navigationController = splitViewController.viewControllers.last as? UINavigationController else { return false}
         navigationController.topViewController?.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem
+        navigationController.topViewController?.navigationItem.leftBarButtonItem = nil
         navigationController.topViewController?.navigationItem.leftItemsSupplementBackButton = true
         splitViewController.delegate = delegate
         return true

@@ -48,9 +48,7 @@
                         <viewLayoutGuide key="safeArea" id="VUw-jc-0yf"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="DetailNavTitle" id="mOI-FS-AaM">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="5JE-49-fVn"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="DetailNavTitle" leftItemsSupplementBackButton="YES" id="mOI-FS-AaM"/>
                     <connections>
                         <outlet property="itemImageView" destination="PJU-FX-79z" id="Dbb-rC-JMV"/>
                     </connections>
@@ -110,8 +108,8 @@
                             <outlet property="delegate" destination="7bK-jq-Zjz" id="RA6-mI-bju"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Splits" id="Zdf-7t-Un8">
-                        <barButtonItem key="backBarButtonItem" title="BackToSplits" id="Qlg-hu-OI8"/>
+                    <navigationItem key="navigationItem" title="Splits" leftItemsSupplementBackButton="YES" id="Zdf-7t-Un8">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="DTM-jB-iCd"/>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
