@@ -58,7 +58,10 @@ class MasterViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return tableView.frame.height/CGFloat(imageArray.count)
+        if let navBarHeight = navigationController?.navigationBar.frame.height {
+            return (tableView.frame.height - navBarHeight)/(CGFloat(imageArray.count))
+        }else{
+            return (tableView.frame.height - 60)/(CGFloat(imageArray.count))
     }
+  }
 }
-
